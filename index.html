@@ -148,52 +148,60 @@
     <section class="panel" id="teilung">
       <div class="section-head">
         <h2>➗ Zellteilung und Wachstum</h2>
-        <p>Klicke die Schritte an und beobachte, wie aus einer Mutterzelle zwei Tochterzellen werden.</p>
+        <p>Klicke die Schritte an und beobachte die Abfolge wie in der Vorlage: Mutterzelle, Einschnürung, Tochterzellen und anschließendes Wachstum.</p>
       </div>
       <div class="step-row">
-        <button class="step-btn active" data-step="a">a) Vorbereitung</button>
-        <button class="step-btn" data-step="b">b) Zellkern teilt sich</button>
-        <button class="step-btn" data-step="c">c) Membran wächst von außen</button>
+        <button class="step-btn active" data-step="a">a) Mutterzelle</button>
+        <button class="step-btn" data-step="b">b) Einschnürung beginnt</button>
+        <button class="step-btn" data-step="c">c) Membran schließt sich</button>
         <button class="step-btn" data-step="d">d) Tochterzellen wachsen</button>
       </div>
       <div class="division-wrap">
         <div class="division-scene is-active" data-scene="a">
-          <div class="cell-graphic single-cell">
-            <div class="cell-shell">
-              <span class="nucleus-dot"></span>
+          <div class="cell-graphic plant-division">
+            <div class="division-plant-shell mother-shell">
+              <span class="nucleus-dot division-nucleus"></span>
             </div>
+            <p class="scene-label">Mutterzelle</p>
           </div>
         </div>
         <div class="division-scene" data-scene="b">
-          <div class="cell-graphic nucleus-split">
-            <div class="cell-shell">
-              <span class="nucleus-dot dot-left"></span>
-              <span class="nucleus-dot dot-right"></span>
+          <div class="cell-graphic plant-division">
+            <div class="division-plant-shell constricting-shell">
+              <span class="stretch-nucleus"></span>
             </div>
+            <p class="scene-label">Die Zellteilung startet.</p>
           </div>
         </div>
         <div class="division-scene" data-scene="c">
-          <div class="cell-graphic membrane-in">
-            <div class="cell-shell pinch-cell">
-              <span class="nucleus-dot dot-left"></span>
-              <span class="nucleus-dot dot-right"></span>
+          <div class="cell-graphic plant-division membrane-in">
+            <div class="division-plant-shell closing-shell">
+              <span class="nucleus-dot division-nucleus dot-top"></span>
+              <span class="nucleus-dot division-nucleus dot-bottom"></span>
               <span class="membrane-arm membrane-arm--left"></span>
               <span class="membrane-arm membrane-arm--right"></span>
               <span class="closing-seam"></span>
             </div>
-            <p class="division-caption">Die neue Membran wächst von außen nach innen und schließt sich erst am Ende in der Mitte.</p>
+            <p class="division-caption">Die neue Membran wächst von beiden Außenseiten nach innen und verbindet sich erst ganz zum Schluss in der Mitte.</p>
           </div>
         </div>
         <div class="division-scene" data-scene="d">
-          <div class="cell-graphic daughters">
-            <div class="mini-cell grown-cell"><span class="nucleus-dot mini-dot"></span></div>
-            <div class="mini-cell grown-cell"><span class="nucleus-dot mini-dot"></span></div>
+          <div class="cell-graphic growth-stage">
+            <div class="daughter-column">
+              <div class="division-mini-plant"><span class="nucleus-dot mini-division-dot"></span></div>
+              <div class="division-mini-plant"><span class="nucleus-dot mini-division-dot"></span></div>
+            </div>
+            <div class="growth-arrow" aria-hidden="true">➜</div>
+            <div class="grown-column">
+              <div class="division-mini-plant division-mini-plant--grown"><span class="nucleus-dot mini-division-dot grown-division-dot"></span></div>
+              <div class="division-mini-plant division-mini-plant--grown"><span class="nucleus-dot mini-division-dot grown-division-dot"></span></div>
+            </div>
           </div>
         </div>
       </div>
       <div class="info-card" id="division-info">
-        <h3>a) Vorbereitung</h3>
-        <p>Die Mutterzelle wächst und bereitet die Teilung vor.</p>
+        <h3>a) Mutterzelle</h3>
+        <p>Die Mutterzelle ist noch ungeteilt und enthält einen Zellkern.</p>
       </div>
 
       <div class="division-facts">

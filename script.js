@@ -100,20 +100,20 @@ const topicInfo = {
 
 const divisionSteps = {
   a: {
-    title: 'a) Vorbereitung',
-    text: 'Die Mutterzelle wächst und bereitet alles für die Teilung vor.'
+    title: 'a) Mutterzelle',
+    text: 'Die Mutterzelle ist noch ungeteilt und besitzt einen Zellkern in der Mitte.'
   },
   b: {
-    title: 'b) Zellkern teilt sich',
-    text: 'Zuerst teilt sich der Zellkern. Die Erbinformation wird auf beide Seiten verteilt.'
+    title: 'b) Einschnürung beginnt',
+    text: 'Die Zellmembran wölbt sich von links und rechts nach innen. Gleichzeitig verändert sich der Zellkern.'
   },
   c: {
-    title: 'c) Neue Membran wächst von außen ein',
-    text: 'Von außen nach innen wächst eine neue Membran ein. Erst in der Mitte schließt sie sich und trennt die Zelle in zwei Tochterzellen.'
+    title: 'c) Membran schließt sich',
+    text: 'Von beiden Außenseiten wächst die neue Membran weiter nach innen und verbindet sich erst ganz zum Schluss in der Mitte.'
   },
   d: {
     title: 'd) Tochterzellen wachsen',
-    text: 'Zuletzt wachsen die neuen Tochterzellen zu vollständigen Mutterzellen heran.'
+    text: 'Es entstehen zwei Tochterzellen, die danach durch Plasmawachstum zu neuen Mutterzellen heranwachsen.'
   }
 };
 
