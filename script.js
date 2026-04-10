@@ -108,8 +108,8 @@ const divisionSteps = {
     text: 'Zuerst teilt sich der Zellkern. Die Erbinformation wird auf beide Seiten verteilt.'
   },
   c: {
-    title: 'c) Neue Membran wächst ein',
-    text: 'Von den Seiten wächst eine neue Membran nach innen. So schnürt sich die Zelle in zwei Tochterzellen ein.'
+    title: 'c) Neue Membran wächst von außen ein',
+    text: 'Von außen nach innen wächst eine neue Membran ein. Erst in der Mitte schließt sie sich und trennt die Zelle in zwei Tochterzellen.'
   },
   d: {
     title: 'd) Tochterzellen wachsen',

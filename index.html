@@ -153,7 +153,7 @@
       <div class="step-row">
         <button class="step-btn active" data-step="a">a) Vorbereitung</button>
         <button class="step-btn" data-step="b">b) Zellkern teilt sich</button>
-        <button class="step-btn" data-step="c">c) Neue Membran</button>
+        <button class="step-btn" data-step="c">c) Membran wächst von außen</button>
         <button class="step-btn" data-step="d">d) Tochterzellen wachsen</button>
       </div>
       <div class="division-wrap">
@@ -177,8 +177,11 @@
             <div class="cell-shell pinch-cell">
               <span class="nucleus-dot dot-left"></span>
               <span class="nucleus-dot dot-right"></span>
-              <span class="divider-bar"></span>
+              <span class="membrane-arm membrane-arm--left"></span>
+              <span class="membrane-arm membrane-arm--right"></span>
+              <span class="closing-seam"></span>
             </div>
+            <p class="division-caption">Die neue Membran wächst von außen nach innen und schließt sich erst am Ende in der Mitte.</p>
           </div>
         </div>
         <div class="division-scene" data-scene="d">
@@ -235,6 +238,8 @@
   <footer class="footer">
     <p>Zellen leicht erklärt · spielerisch und in kleinen Schritten</p>
   </footer>
+
+  <p class="support-note">Hilfe für Liesbeth</p>
 
   <script src="script.js"></script>
 </body>
