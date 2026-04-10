@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZellWerk – Interaktive Biologie</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <p class="eyebrow">Biologie · 7. Klasse</p>
+      <h1>ZellWerk</h1>
+      <p class="hero__text">
+        Lerne den Aufbau von Pflanzen- und Tierzellen spielerisch kennen –
+        mit interaktiven Karten, Vergleichen und Quizfragen.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#entdecken">Zellen entdecken</a>
+        <a class="btn btn--secondary" href="#quiz">Zum Quiz</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel intro-grid">
+      <article>
+        <h2>Was ist eine Zelle?</h2>
+        <p>
+          Zellen sind die kleinsten Bausteine aller Lebewesen. Jede Zelle hat
+          bestimmte Bestandteile mit festen Aufgaben – zum Beispiel Energie
+          bereitstellen, Stoffe transportieren oder Schutz bieten.
+        </p>
+      </article>
+      <article>
+        <h2>Was lernst du hier?</h2>
+        <ul>
+          <li>Aufbau einer typischen Pflanzenzelle</li>
+          <li>Aufbau einer typischen Tierzelle</li>
+          <li>Zellen in Blättern und der Sprossachse</li>
+          <li>Zellteilung und Wachstum</li>
+          <li>Aufgaben wichtiger Zellbestandteile</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="panel" id="entdecken">
+      <div class="section-head">
+        <h2>🔎 Zell-Detektiv</h2>
+        <p>Klicke auf eine Kategorie und entdecke die Bestandteile.</p>
+      </div>
+      <div class="filters" id="filters">
+        <button class="chip active" data-filter="all">Alle</button>
+        <button class="chip" data-filter="plant">Pflanzenzelle</button>
+        <button class="chip" data-filter="animal">Tierzelle</button>
+        <button class="chip" data-filter="transport">Leitung & Aufbau</button>
+        <button class="chip" data-filter="division">Zellteilung</button>
+      </div>
+      <div class="card-grid" id="organelle-grid"></div>
+      <div class="detail-box" id="detail-box">
+        <h3>Wähle eine Karte</h3>
+        <p>Hier erscheinen Beschreibung und Aufgabe des ausgewählten Bestandteils.</p>
+      </div>
+    </section>
+
+    <section class="panel comparison">
+      <div class="section-head">
+        <h2>🌿 Pflanzenzelle und Tierzelle vergleichen</h2>
+      </div>
+      <div class="comparison-grid">
+        <article>
+          <h3>Pflanzenzelle</h3>
+          <ul>
+            <li>hat eine feste <strong>Zellwand</strong></li>
+            <li>enthält <strong>Chloroplasten</strong> für Fotosynthese</li>
+            <li>besitzt meist eine große <strong>Vakuole</strong></li>
+          </ul>
+        </article>
+        <article>
+          <h3>Tierzelle</h3>
+          <ul>
+            <li>hat <strong>keine Zellwand</strong></li>
+            <li>hat <strong>keine Chloroplasten</strong></li>
+            <li>ist oft formveränderlicher</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel theme-grid">
+      <article class="theme-card">
+        <h3>🍃 Zellen der Blätter</h3>
+        <p>
+          Blattzellen enthalten viele Chloroplasten. Dort läuft die
+          <strong>Fotosynthese</strong>: Mit Licht, Wasser und Kohlenstoffdioxid
+          stellt die Pflanze Zucker und Sauerstoff her.
+        </p>
+      </article>
+      <article class="theme-card">
+        <h3>🌱 Zellen der Sprossachse</h3>
+        <p>
+          In der Sprossachse werden <strong>Wasser und Nährstoffe</strong>
+          transportiert. Leitungsbahnen verbinden Wurzel, Stängel und Blätter.
+        </p>
+      </article>
+      <article class="theme-card">
+        <h3>➗ Zellteilung und Wachstum</h3>
+        <p>
+          Neue Zellen entstehen durch <strong>Zellteilung</strong>. Dadurch
+          können Pflanzen und Tiere wachsen und beschädigte Zellen ersetzen.
+        </p>
+      </article>
+    </section>
+
+    <section class="panel game-panel">
+      <div class="section-head">
+        <h2>🎯 Schnellcheck</h2>
+        <p>Ordne die Begriffe der richtigen Zelle zu.</p>
+      </div>
+      <div class="sorter" id="sorter"></div>
+      <button class="btn btn--primary" id="check-sorter">Zuordnung prüfen</button>
+      <p id="sorter-result" class="result"></p>
+    </section>
+
+    <section class="panel" id="quiz">
+      <div class="section-head">
+        <h2>🧠 Mini-Quiz</h2>
+        <p>Teste dein Wissen in wenigen Fragen.</p>
+      </div>
+      <form id="quiz-form" class="quiz"></form>
+      <div class="quiz-actions">
+        <button class="btn btn--primary" id="check-quiz" type="button">Quiz auswerten</button>
+        <button class="btn btn--secondary" id="reset-quiz" type="button">Neu starten</button>
+      </div>
+      <p id="quiz-result" class="result"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Interaktive Übungsseite für Biologie · Thema Zelle · Niveau 7. Klasse</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
