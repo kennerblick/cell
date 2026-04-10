@@ -3,141 +3,193 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ZellWerk – Interaktive Biologie</title>
+  <title>ZellKlick – Zellen leicht erklärt</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="hero">
-    <div class="hero__content">
-      <p class="eyebrow">Biologie · 7. Klasse</p>
-      <h1>ZellWerk</h1>
-      <p class="hero__text">
-        Lerne den Aufbau von Pflanzen- und Tierzellen spielerisch kennen –
-        mit interaktiven Karten, Vergleichen und Quizfragen.
-      </p>
-      <div class="hero__actions">
-        <a class="btn btn--primary" href="#entdecken">Zellen entdecken</a>
-        <a class="btn btn--secondary" href="#quiz">Zum Quiz</a>
+    <div class="hero__content hero__inner">
+      <div class="hero__copy">
+        <p class="eyebrow">Biologie · 7. Klasse</p>
+        <h1>ZellKlick</h1>
+        <p class="hero__text">
+          Zellen sind die Bausteine aller Lebewesen. Klicke dich Schritt für Schritt
+          durch Pflanzenzelle, Tierzelle, Fotosynthese und Zellteilung.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#pflanze">Pflanzenzelle bauen</a>
+          <a class="btn btn--secondary" href="#teilung">Zellteilung ansehen</a>
+        </div>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <div class="float-orb orb-a">🌿</div>
+        <div class="float-orb orb-b">☀️</div>
+        <div class="float-orb orb-c">🧫</div>
       </div>
     </div>
   </header>
 
   <main class="container">
-    <section class="panel intro-grid">
-      <article>
-        <h2>Was ist eine Zelle?</h2>
-        <p>
-          Zellen sind die kleinsten Bausteine aller Lebewesen. Jede Zelle hat
-          bestimmte Bestandteile mit festen Aufgaben – zum Beispiel Energie
-          bereitstellen, Stoffe transportieren oder Schutz bieten.
-        </p>
-      </article>
-      <article>
-        <h2>Was lernst du hier?</h2>
-        <ul>
-          <li>Aufbau einer typischen Pflanzenzelle</li>
-          <li>Aufbau einer typischen Tierzelle</li>
-          <li>Zellen in Blättern und der Sprossachse</li>
-          <li>Zellteilung und Wachstum</li>
-          <li>Aufgaben wichtiger Zellbestandteile</li>
-        </ul>
-      </article>
+    <section class="panel focus-panel">
+      <h2>📌 Merksatz</h2>
+      <div class="focus-note">
+        <strong>Alle Lebewesen sind aus Zellen aufgebaut.</strong>
+        <p>Das nennt man <strong>Zelltheorie</strong>.</p>
+      </div>
     </section>
 
-    <section class="panel" id="entdecken">
+    <section class="panel">
       <div class="section-head">
-        <h2>🔎 Zell-Detektiv</h2>
-        <p>Klicke auf eine Kategorie und entdecke die Bestandteile.</p>
+        <h2>✨ Das lernst du hier</h2>
+        <p>Kurze Häppchen, viel Klicken, leicht merken.</p>
       </div>
-      <div class="filters" id="filters">
-        <button class="chip active" data-filter="all">Alle</button>
-        <button class="chip" data-filter="plant">Pflanzenzelle</button>
-        <button class="chip" data-filter="animal">Tierzelle</button>
-        <button class="chip" data-filter="transport">Leitung & Aufbau</button>
-        <button class="chip" data-filter="division">Zellteilung</button>
-      </div>
-      <div class="card-grid" id="organelle-grid"></div>
-      <div class="detail-box" id="detail-box">
-        <h3>Wähle eine Karte</h3>
-        <p>Hier erscheinen Beschreibung und Aufgabe des ausgewählten Bestandteils.</p>
+      <div class="goal-grid">
+        <div class="goal-card">
+          <strong>Bauteile erkennen</strong>
+          <span>Zellwand, Zellmembran, Zellplasma, Zellkern, Chloroplasten und Vakuole.</span>
+        </div>
+        <div class="goal-card">
+          <strong>Pflanzen verstehen</strong>
+          <span>Blattzellen machen Fotosynthese, Zellen der Sprossachse transportieren Wasser und Nährstoffe.</span>
+        </div>
+        <div class="goal-card">
+          <strong>Wachstum erklären</strong>
+          <span>Zellteilung sorgt dafür, dass Lebewesen wachsen und sich erneuern können.</span>
+        </div>
       </div>
     </section>
 
-    <section class="panel comparison">
+    <section class="panel" id="pflanze">
       <div class="section-head">
-        <h2>🌿 Pflanzenzelle und Tierzelle vergleichen</h2>
+        <h2>🌿 Baue eine Pflanzenzelle</h2>
+        <p>Klicke die Teile an. Sie erscheinen nach und nach in der Grafik.</p>
       </div>
-      <div class="comparison-grid">
-        <article>
-          <h3>Pflanzenzelle</h3>
-          <ul>
-            <li>hat eine feste <strong>Zellwand</strong></li>
-            <li>enthält <strong>Chloroplasten</strong> für Fotosynthese</li>
-            <li>besitzt meist eine große <strong>Vakuole</strong></li>
-          </ul>
-        </article>
-        <article>
-          <h3>Tierzelle</h3>
-          <ul>
-            <li>hat <strong>keine Zellwand</strong></li>
-            <li>hat <strong>keine Chloroplasten</strong></li>
-            <li>ist oft formveränderlicher</li>
-          </ul>
-        </article>
+      <div class="builder-grid">
+        <div class="cell-stage plant-stage" id="plant-stage">
+          <div class="cell-part part-wall"></div>
+          <div class="cell-part part-membrane"></div>
+          <div class="cell-part part-plasma"></div>
+          <div class="cell-part part-vacuole"></div>
+          <div class="cell-part part-core"></div>
+          <div class="cell-part part-chloro part-chloro1"></div>
+          <div class="cell-part part-chloro part-chloro2"></div>
+          <div class="cell-part part-chloro part-chloro3"></div>
+          <span class="stage-label">Pflanzenzelle</span>
+        </div>
+
+        <div class="toolbox">
+          <p class="progress" id="plant-progress">0 von 6 Teilen entdeckt</p>
+          <p class="micro-tip">Tipp: Wenn du die Chloroplasten findest, geht das Sonnenlicht an.</p>
+          <div class="tool-list">
+            <button class="tool-btn" data-builder="plant" data-part="zellwand">Zellwand</button>
+            <button class="tool-btn" data-builder="plant" data-part="zellmembran">Zellmembran</button>
+            <button class="tool-btn" data-builder="plant" data-part="zellplasma">Zellplasma</button>
+            <button class="tool-btn" data-builder="plant" data-part="zellkern">Zellkern</button>
+            <button class="tool-btn" data-builder="plant" data-part="chloroplasten">Chloroplasten</button>
+            <button class="tool-btn" data-builder="plant" data-part="vakuole">Vakuole</button>
+          </div>
+          <div class="info-card" id="plant-info">
+            <h3>Start</h3>
+            <p>Klicke auf einen Begriff, um den Teil in der Zelle zu finden.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="panel theme-grid">
-      <article class="theme-card">
-        <h3>🍃 Zellen der Blätter</h3>
-        <p>
-          Blattzellen enthalten viele Chloroplasten. Dort läuft die
-          <strong>Fotosynthese</strong>: Mit Licht, Wasser und Kohlenstoffdioxid
-          stellt die Pflanze Zucker und Sauerstoff her.
-        </p>
-      </article>
-      <article class="theme-card">
-        <h3>🌱 Zellen der Sprossachse</h3>
-        <p>
-          In der Sprossachse werden <strong>Wasser und Nährstoffe</strong>
-          transportiert. Leitungsbahnen verbinden Wurzel, Stängel und Blätter.
-        </p>
-      </article>
-      <article class="theme-card">
-        <h3>➗ Zellteilung und Wachstum</h3>
-        <p>
-          Neue Zellen entstehen durch <strong>Zellteilung</strong>. Dadurch
-          können Pflanzen und Tiere wachsen und beschädigte Zellen ersetzen.
-        </p>
-      </article>
-    </section>
-
-    <section class="panel game-panel">
+    <section class="panel">
       <div class="section-head">
-        <h2>🎯 Schnellcheck</h2>
-        <p>Ordne die Begriffe der richtigen Zelle zu.</p>
+        <h2>🍃 Wichtige Pflanzenzellen</h2>
+        <p>Klicke auf ein Thema.</p>
       </div>
-      <div class="sorter" id="sorter"></div>
-      <button class="btn btn--primary" id="check-sorter">Zuordnung prüfen</button>
-      <p id="sorter-result" class="result"></p>
+      <div class="mini-grid">
+        <button class="mini-card" data-topic="blatt">Blattzellen</button>
+        <button class="mini-card" data-topic="spross">Zellen der Sprossachse</button>
+        <button class="mini-card" data-topic="fotosynthese">Fotosynthese</button>
+      </div>
+      <div class="info-card" id="topic-info">
+        <h3>Wähle ein Thema</h3>
+        <p>Hier erscheint eine kurze Erklärung in einfacher Sprache.</p>
+      </div>
+    </section>
+
+    <section class="panel" id="tier">
+      <div class="section-head">
+        <h2>🐾 Entdecke eine Tierzelle</h2>
+        <p>Auch Tierzellen haben einen Grundbauplan.</p>
+      </div>
+      <div class="builder-grid">
+        <div class="cell-stage animal-stage" id="animal-stage">
+          <div class="cell-part animal-membrane"></div>
+          <div class="cell-part animal-plasma"></div>
+          <div class="cell-part animal-core"></div>
+          <span class="stage-label">Tierzelle</span>
+        </div>
+
+        <div class="toolbox">
+          <p class="progress" id="animal-progress">0 von 3 Teilen entdeckt</p>
+          <div class="tool-list">
+            <button class="tool-btn" data-builder="animal" data-part="zellmembran">Zellmembran</button>
+            <button class="tool-btn" data-builder="animal" data-part="zellplasma">Zellplasma</button>
+            <button class="tool-btn" data-builder="animal" data-part="zellkern">Zellkern</button>
+          </div>
+          <div class="hint-list">
+            <div class="hint">Keine Zellwand</div>
+            <div class="hint">Keine Chloroplasten</div>
+            <div class="hint">Keine große Vakuole</div>
+          </div>
+          <div class="info-card" id="animal-info">
+            <h3>Merke</h3>
+            <p>Tierzellen haben Zellmembran, Zellplasma und Zellkern.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="teilung">
+      <div class="section-head">
+        <h2>➗ Zellteilung und Wachstum</h2>
+        <p>Klicke die drei Schritte an.</p>
+      </div>
+      <div class="step-row">
+        <button class="step-btn active" data-step="a">a) Anfang</button>
+        <button class="step-btn" data-step="b">b) Teilung</button>
+        <button class="step-btn" data-step="c">c) Ergebnis</button>
+      </div>
+      <div class="division-wrap">
+        <div class="division-scene is-active" data-scene="a">
+          <div class="bubble big"></div>
+        </div>
+        <div class="division-scene" data-scene="b">
+          <div class="bubble split-left"></div>
+          <div class="bubble split-right"></div>
+        </div>
+        <div class="division-scene" data-scene="c">
+          <div class="bubble small"></div>
+          <div class="bubble small"></div>
+        </div>
+      </div>
+      <div class="info-card" id="division-info">
+        <h3>a) Anfang</h3>
+        <p>Eine Zelle wächst und bereitet sich auf die Teilung vor.</p>
+      </div>
     </section>
 
     <section class="panel" id="quiz">
       <div class="section-head">
-        <h2>🧠 Mini-Quiz</h2>
-        <p>Teste dein Wissen in wenigen Fragen.</p>
+        <h2>🎮 Mini-Quiz</h2>
+        <p>Nur drei kurze Fragen.</p>
       </div>
       <form id="quiz-form" class="quiz"></form>
       <div class="quiz-actions">
-        <button class="btn btn--primary" id="check-quiz" type="button">Quiz auswerten</button>
-        <button class="btn btn--secondary" id="reset-quiz" type="button">Neu starten</button>
+        <button class="btn btn--primary" id="check-quiz" type="button">Prüfen</button>
+        <button class="btn btn--secondary" id="reset-quiz" type="button">Neu</button>
       </div>
       <p id="quiz-result" class="result"></p>
     </section>
   </main>
 
   <footer class="footer">
-    <p>Interaktive Übungsseite für Biologie · Thema Zelle · Niveau 7. Klasse</p>
+    <p>Zellen leicht erklärt · spielerisch und in kleinen Schritten</p>
   </footer>
 
   <script src="script.js"></script>

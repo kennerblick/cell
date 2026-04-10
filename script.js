@@ -1,144 +1,227 @@
-const organelles = [
-  {
-    title: 'Zellmembran',
-    category: 'all',
-    short: 'Grenze der Zelle',
-    description: 'Die Zellmembran umgibt die Zelle und regelt, welche Stoffe hinein- oder hinausgelangen.',
-    task: 'Sie schützt die Zelle und kontrolliert den Stoffaustausch.'
+const builders = {
+  plant: {
+    total: 6,
+    stageId: 'plant-stage',
+    infoId: 'plant-info',
+    progressId: 'plant-progress',
+    parts: {
+      zellwand: {
+        title: 'Zellwand',
+        selectors: ['.part-wall'],
+        description: 'Die Zellwand besteht vor allem aus Cellulosefasern und ist fest.',
+        task: 'Sie gibt der Pflanzenzelle Form, Festigkeit und Schutz.',
+        remember: 'Nur Pflanzenzellen besitzen diese feste Hülle.'
+      },
+      zellmembran: {
+        title: 'Zellmembran',
+        selectors: ['.part-membrane'],
+        description: 'Die Zellmembran ist ein dünnes Häutchen und bildet die Grenzschicht der Zelle.',
+        task: 'Sie grenzt die Zelle ab und hält alles zusammen.',
+        remember: 'Pflanzen- und Tierzellen haben eine Zellmembran.'
+      },
+      zellplasma: {
+        title: 'Zellplasma',
+        selectors: ['.part-plasma'],
+        description: 'Das Zellplasma ist zähflüssig und füllt die Zelle aus.',
+        task: 'Hier läuft der Zellstoffwechsel ab.',
+        remember: 'Viele wichtige Stoffe werden hier transportiert.'
+      },
+      zellkern: {
+        title: 'Zellkern',
+        selectors: ['.part-core'],
+        effectClass: 'focus-on',
+        description: 'Im Zellkern liegen die Erbanlagen.',
+        task: 'Er steuert den Zellstoffwechsel und viele Vorgänge der Zelle.',
+        remember: 'Der Zellkern ist die Steuerzentrale.'
+      },
+      chloroplasten: {
+        title: 'Chloroplasten',
+        selectors: ['.part-chloro1', '.part-chloro2', '.part-chloro3'],
+        effectClass: 'photosynthesis-on',
+        description: 'Chloroplasten sind grün und enthalten den Blattfarbstoff.',
+        task: 'In ihnen findet die Fotosynthese statt.',
+        remember: 'Mit Licht, Wasser und Kohlenstoffdioxid entsteht Zucker und Sauerstoff.'
+      },
+      vakuole: {
+        title: 'Vakuole',
+        selectors: ['.part-vacuole'],
+        description: 'Die Vakuole ist ein großer Hohlraum im Zellplasma.',
+        task: 'Sie speichert Zellsaft, Wasser, Nährstoffe und manchmal auch Abfallstoffe.',
+        remember: 'Die große Vakuole ist typisch für Pflanzenzellen.'
+      }
+    }
   },
-  {
-    title: 'Zellkern',
-    category: 'all',
-    short: 'Steuerzentrale',
-    description: 'Der Zellkern enthält die Erbinformationen.',
-    task: 'Er steuert viele Vorgänge in der Zelle.'
-  },
-  {
-    title: 'Mitochondrien',
-    category: 'all',
-    short: 'Kraftwerke',
-    description: 'Mitochondrien gewinnen Energie aus Nährstoffen.',
-    task: 'Sie versorgen die Zelle mit Energie.'
-  },
-  {
-    title: 'Zellwand',
-    category: 'plant',
-    short: 'Feste Hülle',
-    description: 'Die Zellwand liegt außerhalb der Zellmembran und gibt der Pflanzenzelle Stabilität.',
-    task: 'Sie schützt und stützt die Zelle.'
-  },
-  {
-    title: 'Chloroplasten',
-    category: 'plant',
-    short: 'Fotosynthese',
-    description: 'Chloroplasten enthalten den grünen Blattfarbstoff Chlorophyll.',
-    task: 'Hier findet die Fotosynthese statt.'
-  },
-  {
-    title: 'Vakuole',
-    category: 'plant',
-    short: 'Speicherraum',
-    description: 'Die große Vakuole speichert Wasser und gelöste Stoffe.',
-    task: 'Sie sorgt auch für Druck und Stabilität.'
-  },
-  {
-    title: 'Blattzellen',
-    category: 'transport',
-    short: 'Licht nutzen',
-    description: 'Blattzellen besitzen viele Chloroplasten und nutzen Lichtenergie.',
-    task: 'Sie stellen bei der Fotosynthese Zucker her.'
-  },
-  {
-    title: 'Zellen der Sprossachse',
-    category: 'transport',
-    short: 'Transportwege',
-    description: 'In der Sprossachse verlaufen Leitungsbahnen für Wasser und Nährstoffe.',
-    task: 'Sie verbinden Wurzel, Stängel und Blätter.'
-  },
-  {
-    title: 'Zellteilung',
-    category: 'division',
-    short: 'Neue Zellen entstehen',
-    description: 'Bei der Zellteilung wird aus einer Zelle zwei neue Zellen.',
-    task: 'So werden Wachstum und Reparatur möglich.'
-  },
-  {
-    title: 'Wachstum',
-    category: 'division',
-    short: 'Größer werden',
-    description: 'Lebewesen wachsen, weil Zellen sich teilen und vermehren.',
-    task: 'Viele neue Zellen bilden Gewebe und Organe.'
+  animal: {
+    total: 3,
+    stageId: 'animal-stage',
+    infoId: 'animal-info',
+    progressId: 'animal-progress',
+    parts: {
+      zellmembran: {
+        title: 'Zellmembran',
+        selectors: ['.animal-membrane'],
+        description: 'Die Zellmembran ist die äußere Grenze der Tierzelle.',
+        task: 'Sie schützt die Zelle und grenzt sie ab.'
+      },
+      zellplasma: {
+        title: 'Zellplasma',
+        selectors: ['.animal-plasma'],
+        description: 'Auch Tierzellen besitzen zähflüssiges Zellplasma.',
+        task: 'Dort laufen viele Stoffwechselvorgänge ab.'
+      },
+      zellkern: {
+        title: 'Zellkern',
+        selectors: ['.animal-core'],
+        effectClass: 'focus-on',
+        description: 'Der Zellkern enthält die Erbinformationen.',
+        task: 'Er steuert die Zelle.'
+      }
+    }
   }
-];
+};
 
-const sorterItems = [
-  { term: 'Chloroplasten', answer: 'plant' },
-  { term: 'Zellwand', answer: 'plant' },
-  { term: 'große Vakuole', answer: 'plant' },
-  { term: 'keine Zellwand', answer: 'animal' },
-  { term: 'formveränderlicher', answer: 'animal' }
-];
+const topicInfo = {
+  blatt: {
+    title: 'Blattzellen',
+    text: 'Blattzellen besitzen besonders viele Chloroplasten.',
+    extra: 'Darum können sie mit Sonnenlicht besonders gut Fotosynthese machen.'
+  },
+  spross: {
+    title: 'Zellen der Sprossachse',
+    text: 'In der Sprossachse liegen Leitungsbahnen.',
+    extra: 'Sie transportieren Wasser und Nährstoffe durch die Pflanze.'
+  },
+  fotosynthese: {
+    title: 'Fotosynthese',
+    text: 'Die Pflanze nutzt Sonnenlicht, Wasser und Kohlenstoffdioxid.',
+    extra: 'Daraus entstehen Zucker als Nahrung und Sauerstoff für die Luft.'
+  }
+};
+
+const divisionSteps = {
+  a: {
+    title: 'a) Anfang',
+    text: 'Eine Zelle wächst und sammelt Material. Auch die Informationen im Zellkern liegen bereit.'
+  },
+  b: {
+    title: 'b) Teilung',
+    text: 'Die Zelle teilt sich in der Mitte. Aus einer Zelle werden zwei neue Zellen.'
+  },
+  c: {
+    title: 'c) Ergebnis',
+    text: 'Nun sind zwei Zellen da. So werden Wachstum, Erneuerung und Reparatur möglich.'
+  }
+};
 
 const quizQuestions = [
   {
-    question: 'Welche Struktur gibt der Pflanzenzelle zusätzliche Stabilität?',
-    options: ['Zellwand', 'Mitochondrium', 'Ribosom'],
+    question: 'Welcher Teil macht die Fotosynthese?',
+    options: ['Chloroplasten', 'Zellkern', 'Zellwand'],
+    answer: 'Chloroplasten'
+  },
+  {
+    question: 'Was gibt einer Pflanzenzelle Schutz und Festigkeit?',
+    options: ['Zellwand', 'Zellplasma', 'Zellkern'],
     answer: 'Zellwand'
   },
   {
-    question: 'Wo findet die Fotosynthese statt?',
-    options: ['Im Zellkern', 'In den Chloroplasten', 'In der Zellmembran'],
-    answer: 'In den Chloroplasten'
-  },
-  {
-    question: 'Wofür ist die Sprossachse wichtig?',
-    options: ['Für die Fortbewegung', 'Für die Leitung von Wasser und Nährstoffen', 'Für die Atmung nur nachts'],
-    answer: 'Für die Leitung von Wasser und Nährstoffen'
-  },
-  {
     question: 'Warum ist Zellteilung wichtig?',
-    options: ['Nur zur Verdauung', 'Für Wachstum und Reparatur', 'Nur zum Sehen'],
-    answer: 'Für Wachstum und Reparatur'
+    options: ['Für Wachstum', 'Nur zum Sehen', 'Nur zum Schlafen'],
+    answer: 'Für Wachstum'
   }
 ];
 
-function renderCards(filter = 'all') {
-  const grid = document.getElementById('organelle-grid');
-  const filtered = filter === 'all' ? organelles : organelles.filter(item => item.category === filter || item.category === 'all');
-  grid.innerHTML = filtered.map(item => `
-    <button class="organelle-card" data-title="${item.title}">
-      <strong>${item.title}</strong>
-      <p>${item.short}</p>
-      <small>${item.category}</small>
-    </button>
-  `).join('');
+function popCard(element) {
+  if (!element) return;
+  element.classList.remove('is-pop');
+  void element.offsetWidth;
+  element.classList.add('is-pop');
+}
 
-  grid.querySelectorAll('.organelle-card').forEach((card, index) => {
-    card.addEventListener('click', () => showDetail(filtered[index]));
+function setupBuilder(name) {
+  const config = builders[name];
+  const info = document.getElementById(config.infoId);
+  const progress = document.getElementById(config.progressId);
+  const stage = document.getElementById(config.stageId);
+  const found = new Set();
+
+  document.querySelectorAll(`[data-builder="${name}"]`).forEach(button => {
+    button.addEventListener('click', () => {
+      const key = button.dataset.part;
+      const part = config.parts[key];
+      if (!part) return;
+
+      part.selectors.forEach(selector => {
+        const el = document.querySelector(`#${config.stageId} ${selector}`);
+        if (el) el.classList.add('is-visible');
+      });
+
+      if (part.effectClass && stage) {
+        stage.classList.add(part.effectClass);
+      }
+
+      found.add(key);
+      button.classList.add('done');
+      progress.textContent = `${found.size} von ${config.total} Teilen entdeckt`;
+
+      if (name === 'plant' && key === 'chloroplasten') {
+        progress.textContent += ' · Sonnenlicht an ☀️';
+      }
+
+      info.innerHTML = `
+        <h3>${part.title}</h3>
+        <p><strong>Beschreibung:</strong> ${part.description}</p>
+        <p><strong>Aufgabe:</strong> ${part.task}</p>
+        ${part.remember ? `<p><strong>Merke:</strong> ${part.remember}</p>` : ''}
+      `;
+      popCard(info);
+    });
   });
 }
 
-function showDetail(item) {
-  const box = document.getElementById('detail-box');
-  box.innerHTML = `
-    <h3>${item.title}</h3>
-    <p><strong>Beschreibung:</strong> ${item.description}</p>
-    <p><strong>Aufgabe:</strong> ${item.task}</p>
-  `;
+function setupTopics() {
+  const info = document.getElementById('topic-info');
+
+  document.querySelectorAll('[data-topic]').forEach(button => {
+    button.addEventListener('click', () => {
+      const topic = topicInfo[button.dataset.topic];
+      if (!topic) return;
+
+      document.querySelectorAll('[data-topic]').forEach(card => card.classList.remove('active'));
+      button.classList.add('active');
+
+      info.innerHTML = `
+        <h3>${topic.title}</h3>
+        <p>${topic.text}</p>
+        <p><strong>Merke:</strong> ${topic.extra}</p>
+      `;
+      popCard(info);
+    });
+  });
 }
 
-function renderSorter() {
-  const sorter = document.getElementById('sorter');
-  sorter.innerHTML = sorterItems.map((item, index) => `
-    <label>
-      <strong>${item.term}</strong>
-      <select data-index="${index}">
-        <option value="">Bitte wählen</option>
-        <option value="plant">Pflanzenzelle</option>
-        <option value="animal">Tierzelle</option>
-      </select>
-    </label>
-  `).join('');
+function setupDivision() {
+  const info = document.getElementById('division-info');
+
+  document.querySelectorAll('[data-step]').forEach(button => {
+    button.addEventListener('click', () => {
+      const step = divisionSteps[button.dataset.step];
+      if (!step) return;
+
+      document.querySelectorAll('.step-btn').forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      document.querySelectorAll('.division-scene').forEach(scene => scene.classList.remove('is-active'));
+      const activeScene = document.querySelector(`.division-scene[data-scene="${button.dataset.step}"]`);
+      if (activeScene) activeScene.classList.add('is-active');
+
+      info.innerHTML = `
+        <h3>${step.title}</h3>
+        <p>${step.text}</p>
+      `;
+      popCard(info);
+    });
+  });
 }
 
 function renderQuiz() {
@@ -153,40 +236,26 @@ function renderQuiz() {
   `).join('');
 }
 
-document.getElementById('filters').addEventListener('click', (event) => {
-  const button = event.target.closest('[data-filter]');
-  if (!button) return;
-  document.querySelectorAll('.chip').forEach(chip => chip.classList.remove('active'));
-  button.classList.add('active');
-  renderCards(button.dataset.filter);
-});
-
-document.getElementById('check-sorter').addEventListener('click', () => {
-  const selects = document.querySelectorAll('#sorter select');
-  let correct = 0;
-  selects.forEach(select => {
-    if (select.value === sorterItems[Number(select.dataset.index)].answer) correct += 1;
-  });
-  document.getElementById('sorter-result').textContent = `Du hast ${correct} von ${sorterItems.length} richtig zugeordnet.`;
-});
-
 document.getElementById('check-quiz').addEventListener('click', () => {
   let score = 0;
   quizQuestions.forEach((q, idx) => {
     const selected = document.querySelector(`input[name="q${idx}"]:checked`);
     if (selected && selected.value === q.answer) score += 1;
   });
-  document.getElementById('quiz-result').textContent = `Ergebnis: ${score} von ${quizQuestions.length} Punkten.`;
+
+  const result = document.getElementById('quiz-result');
+  result.textContent = score === quizQuestions.length
+    ? `Perfekt! Du hast alle ${quizQuestions.length} Fragen richtig.`
+    : `Super! Du hast ${score} von ${quizQuestions.length} richtig.`;
 });
 
 document.getElementById('reset-quiz').addEventListener('click', () => {
   document.getElementById('quiz-form').reset();
   document.getElementById('quiz-result').textContent = '';
-  document.getElementById('sorter-result').textContent = '';
-  document.querySelectorAll('#sorter select').forEach(select => select.value = '');
 });
 
-renderCards();
-renderSorter();
+setupBuilder('plant');
+setupBuilder('animal');
+setupTopics();
+setupDivision();
 renderQuiz();
-showDetail(organelles[0]);
