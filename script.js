@@ -100,16 +100,20 @@ const topicInfo = {
 
 const divisionSteps = {
   a: {
-    title: 'a) Anfang',
-    text: 'Eine Zelle wächst und sammelt Material. Auch die Informationen im Zellkern liegen bereit.'
+    title: 'a) Vorbereitung',
+    text: 'Die Mutterzelle wächst und bereitet alles für die Teilung vor.'
   },
   b: {
-    title: 'b) Teilung',
-    text: 'Die Zelle teilt sich in der Mitte. Aus einer Zelle werden zwei neue Zellen.'
+    title: 'b) Zellkern teilt sich',
+    text: 'Zuerst teilt sich der Zellkern. Die Erbinformation wird auf beide Seiten verteilt.'
   },
   c: {
-    title: 'c) Ergebnis',
-    text: 'Nun sind zwei Zellen da. So werden Wachstum, Erneuerung und Reparatur möglich.'
+    title: 'c) Neue Membran wächst ein',
+    text: 'Von den Seiten wächst eine neue Membran nach innen. So schnürt sich die Zelle in zwei Tochterzellen ein.'
+  },
+  d: {
+    title: 'd) Tochterzellen wachsen',
+    text: 'Zuletzt wachsen die neuen Tochterzellen zu vollständigen Mutterzellen heran.'
   }
 };
 

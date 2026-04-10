@@ -148,29 +148,73 @@
     <section class="panel" id="teilung">
       <div class="section-head">
         <h2>➗ Zellteilung und Wachstum</h2>
-        <p>Klicke die drei Schritte an.</p>
+        <p>Klicke die Schritte an und beobachte, wie aus einer Mutterzelle zwei Tochterzellen werden.</p>
       </div>
       <div class="step-row">
-        <button class="step-btn active" data-step="a">a) Anfang</button>
-        <button class="step-btn" data-step="b">b) Teilung</button>
-        <button class="step-btn" data-step="c">c) Ergebnis</button>
+        <button class="step-btn active" data-step="a">a) Vorbereitung</button>
+        <button class="step-btn" data-step="b">b) Zellkern teilt sich</button>
+        <button class="step-btn" data-step="c">c) Neue Membran</button>
+        <button class="step-btn" data-step="d">d) Tochterzellen wachsen</button>
       </div>
       <div class="division-wrap">
         <div class="division-scene is-active" data-scene="a">
-          <div class="bubble big"></div>
+          <div class="cell-graphic single-cell">
+            <div class="cell-shell">
+              <span class="nucleus-dot"></span>
+            </div>
+          </div>
         </div>
         <div class="division-scene" data-scene="b">
-          <div class="bubble split-left"></div>
-          <div class="bubble split-right"></div>
+          <div class="cell-graphic nucleus-split">
+            <div class="cell-shell">
+              <span class="nucleus-dot dot-left"></span>
+              <span class="nucleus-dot dot-right"></span>
+            </div>
+          </div>
         </div>
         <div class="division-scene" data-scene="c">
-          <div class="bubble small"></div>
-          <div class="bubble small"></div>
+          <div class="cell-graphic membrane-in">
+            <div class="cell-shell pinch-cell">
+              <span class="nucleus-dot dot-left"></span>
+              <span class="nucleus-dot dot-right"></span>
+              <span class="divider-bar"></span>
+            </div>
+          </div>
+        </div>
+        <div class="division-scene" data-scene="d">
+          <div class="cell-graphic daughters">
+            <div class="mini-cell grown-cell"><span class="nucleus-dot mini-dot"></span></div>
+            <div class="mini-cell grown-cell"><span class="nucleus-dot mini-dot"></span></div>
+          </div>
         </div>
       </div>
       <div class="info-card" id="division-info">
-        <h3>a) Anfang</h3>
-        <p>Eine Zelle wächst und bereitet sich auf die Teilung vor.</p>
+        <h3>a) Vorbereitung</h3>
+        <p>Die Mutterzelle wächst und bereitet die Teilung vor.</p>
+      </div>
+
+      <div class="division-facts">
+        <div class="info-card">
+          <h3>Wozu dient Zellteilung?</h3>
+          <ul class="fact-list">
+            <li><strong>Wachstum</strong> von Pflanzen, Tieren und Menschen</li>
+            <li><strong>Regeneration</strong> und Erneuerung abgestorbener Zellen, zum Beispiel nach Verletzungen</li>
+            <li><strong>Ungeschlechtliche Fortpflanzung</strong>, zum Beispiel bei Stecklingen oder Senkern</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3>Fortpflanzung einfach erklärt</h3>
+          <div class="compare-grid">
+            <div class="compare-card compare-card--blue">
+              <strong>Geschlechtlich</strong>
+              <p>Zwei Eltern erzeugen Nachkommen. Die Kinder tragen Merkmale von beiden Eltern.</p>
+            </div>
+            <div class="compare-card compare-card--green">
+              <strong>Ungeschlechtlich</strong>
+              <p>Ein Teil von nur einem Elternteil bildet neue Nachkommen. Die Merkmale sind fast gleich – wie bei Zwillingen.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
