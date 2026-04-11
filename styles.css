@@ -345,6 +345,18 @@ h2 { margin-top: 0; }
   gap: 10px;
 }
 
+.plant-division--image {
+  gap: 8px;
+}
+
+.division-reference-image {
+  display: block;
+  width: min(180px, 100%);
+  height: auto;
+  image-rendering: auto;
+  filter: drop-shadow(0 6px 10px rgba(98, 70, 13, 0.14));
+}
+
 .scene-label {
   margin: 0;
   font-size: .95rem;

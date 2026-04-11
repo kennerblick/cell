@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 220" role="img" aria-labelledby="title desc">
+  <title id="title">Membran schließt sich</title>
+  <desc id="desc">Eine Pflanzenzelle mit fast geschlossener Trennmembran in der Mitte und zwei Zellkernen oben und unten.</desc>
+  <defs>
+    <linearGradient id="cellFill2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff7b5"/>
+      <stop offset="58%" stop-color="#ffe789"/>
+      <stop offset="100%" stop-color="#f5d35d"/>
+    </linearGradient>
+    <linearGradient id="innerFill2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff8cc"/>
+      <stop offset="100%" stop-color="#ffe998"/>
+    </linearGradient>
+    <radialGradient id="nucleusFill2" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#efcf9a"/>
+      <stop offset="65%" stop-color="#c98838"/>
+      <stop offset="100%" stop-color="#a7651e"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="180" height="220" fill="none"/>
+
+  <path d="M45 16 L135 16 Q145 18 147 28 L142 78 C111 84 103 93 103 110 C103 127 111 136 142 142 L147 192 Q145 202 135 204 L45 204 Q35 202 33 192 L38 142 C69 136 77 127 77 110 C77 93 69 84 38 78 L33 28 Q35 18 45 16 Z"
+        fill="url(#cellFill2)" stroke="#a7651e" stroke-width="4"/>
+
+  <path d="M53 24 L127 24 Q135 26 137 34 L133 79 C107 84 98 94 98 110 C98 126 107 136 133 141 L137 184 Q135 192 127 196 L53 196 Q45 192 43 184 L47 141 C73 136 82 126 82 110 C82 94 73 84 47 79 L43 34 Q45 26 53 24 Z"
+        fill="url(#innerFill2)" stroke="#d7a93d" stroke-width="2.2"/>
+
+  <path d="M76 109 H104" stroke="#a7651e" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M90 82 V138" stroke="#b47522" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+
+  <circle cx="90" cy="70" r="12" fill="url(#nucleusFill2)" stroke="#995a19" stroke-width="2"/>
+  <circle cx="90" cy="150" r="12" fill="url(#nucleusFill2)" stroke="#995a19" stroke-width="2"/>
+</svg>

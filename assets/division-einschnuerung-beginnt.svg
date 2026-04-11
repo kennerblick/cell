@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 220" role="img" aria-labelledby="title desc">
+  <title id="title">Einschnürung beginnt</title>
+  <desc id="desc">Eine Pflanzenzelle mit deutlicher Einschnürung in der Mitte und einem länglichen Zellkern.</desc>
+  <defs>
+    <linearGradient id="cellFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff7b5"/>
+      <stop offset="58%" stop-color="#ffe789"/>
+      <stop offset="100%" stop-color="#f5d35d"/>
+    </linearGradient>
+    <linearGradient id="innerFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff8cc"/>
+      <stop offset="100%" stop-color="#ffe998"/>
+    </linearGradient>
+    <radialGradient id="nucleusFill" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#efcf9a"/>
+      <stop offset="65%" stop-color="#c98838"/>
+      <stop offset="100%" stop-color="#a7651e"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="180" height="220" fill="none"/>
+
+  <path d="M45 16 L135 16 Q145 18 147 28 L142 84 C118 88 112 97 112 110 C112 123 118 132 142 136 L147 192 Q145 202 135 204 L45 204 Q35 202 33 192 L38 136 C62 132 68 123 68 110 C68 97 62 88 38 84 L33 28 Q35 18 45 16 Z"
+        fill="url(#cellFill)" stroke="#a7651e" stroke-width="4"/>
+
+  <path d="M53 24 L127 24 Q135 26 137 34 L133 85 C112 88 106 98 106 110 C106 122 112 132 133 135 L137 184 Q135 192 127 196 L53 196 Q45 192 43 184 L47 135 C68 132 74 122 74 110 C74 98 68 88 47 85 L43 34 Q45 26 53 24 Z"
+        fill="url(#innerFill)" stroke="#d7a93d" stroke-width="2.2"/>
+
+  <path d="M90 70 C106 70 111 83 101 96 C112 107 108 134 90 134 C72 134 68 107 79 96 C69 83 74 70 90 70 Z"
+        fill="url(#nucleusFill)" stroke="#995a19" stroke-width="2"/>
+</svg>

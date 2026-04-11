@@ -105,11 +105,11 @@ const divisionSteps = {
   },
   b: {
     title: 'b) Einschnürung beginnt',
-    text: 'Die Zellmembran wölbt sich von links und rechts nach innen. Gleichzeitig verändert sich der Zellkern.'
+    text: 'Die Zelle wird in der Mitte deutlich eingeschnürt. Der Zellkern streckt sich dabei länglich aus.'
   },
   c: {
     title: 'c) Membran schließt sich',
-    text: 'Von beiden Außenseiten wächst die neue Membran weiter nach innen und verbindet sich erst ganz zum Schluss in der Mitte.'
+    text: 'Jetzt ist die Trennung fast fertig: Von beiden Seiten wächst die Membran weiter ein, bis sie sich genau in der Mitte verbindet.'
   },
   d: {
     title: 'd) Tochterzellen wachsen',
