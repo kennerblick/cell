@@ -274,6 +274,59 @@ const quizQuestions = [
   }
 ];
 
+const imageQuizQuestions = [
+  {
+    question: 'Welche Abbildung zeigt eine Nervenzelle?',
+    options: [
+      { label: 'Nervenzelle', image: 'assets/image-quiz/neuron.svg' },
+      { label: 'Muskelzelle', image: 'assets/image-quiz/muscle.svg' },
+      { label: 'Hautzellen', image: 'assets/image-quiz/skin.svg' }
+    ],
+    answerIndex: 0,
+    explain: 'Nervenzellen haben einen Zellkörper und lange Fortsätze, um Signale weiterzuleiten.'
+  },
+  {
+    question: 'Welche Abbildung zeigt eine rote Blutzelle?',
+    options: [
+      { label: 'Eizelle', image: 'assets/image-quiz/egg.svg' },
+      { label: 'Rote Blutzelle', image: 'assets/image-quiz/red-blood.svg' },
+      { label: 'Nervenzelle', image: 'assets/image-quiz/neuron.svg' }
+    ],
+    answerIndex: 1,
+    explain: 'Rote Blutzellen sind scheibenfoermig und transportieren Sauerstoff mit Hämoglobin.'
+  },
+  {
+    question: 'Welche Abbildung zeigt eine Eizelle?',
+    options: [
+      { label: 'Eizelle', image: 'assets/image-quiz/egg.svg' },
+      { label: 'Rote Blutzelle', image: 'assets/image-quiz/red-blood.svg' },
+      { label: 'Muskelzelle', image: 'assets/image-quiz/muscle.svg' }
+    ],
+    answerIndex: 0,
+    explain: 'Die Eizelle ist besonders groß und enthält viele Nährstoffe für den Entwicklungsbeginn.'
+  },
+  {
+    question: 'In welcher Abbildung sieht man Chloroplasten?',
+    options: [
+      { label: 'Hautzellen', image: 'assets/image-quiz/skin.svg' },
+      { label: 'Chloroplast', image: 'assets/image-quiz/chloroplast.svg' },
+      { label: 'Nervenzelle', image: 'assets/image-quiz/neuron.svg' }
+    ],
+    answerIndex: 1,
+    explain: 'Chloroplasten sind grüne Organellen der Pflanzenzelle und Ort der Fotosynthese.'
+  },
+  {
+    question: 'Welche Abbildung passt zu dicht angeordneten Hautzellen?',
+    options: [
+      { label: 'Rote Blutzelle', image: 'assets/image-quiz/red-blood.svg' },
+      { label: 'Hautzellen', image: 'assets/image-quiz/skin.svg' },
+      { label: 'Muskelzelle', image: 'assets/image-quiz/muscle.svg' }
+    ],
+    answerIndex: 1,
+    explain: 'Hautzellen liegen eng nebeneinander und bilden eine schützende Oberfläche.'
+  }
+];
+
 function popCard(element) {
   if (!element) return;
   element.classList.remove('is-pop');
@@ -456,8 +509,80 @@ function renderQuiz() {
   });
 }
 
+let imageQuizScore = 0;
+let imageQuizAnswered = 0;
+
+function updateImageQuizScore() {
+  const bar = document.getElementById('image-quiz-score');
+  const text = document.getElementById('image-quiz-score-text');
+  const fill = document.getElementById('image-quiz-score-fill');
+  bar.hidden = false;
+  text.textContent = `${imageQuizScore} von ${imageQuizAnswered} richtig`;
+  fill.style.width = `${imageQuizAnswered > 0 ? Math.round(imageQuizScore / imageQuizAnswered * 100) : 0}%`;
+}
+
+function renderImageQuiz() {
+  imageQuizScore = 0;
+  imageQuizAnswered = 0;
+  const bar = document.getElementById('image-quiz-score');
+  bar.hidden = true;
+
+  const list = document.getElementById('image-quiz-list');
+  list.innerHTML = imageQuizQuestions.map((item, idx) => `
+    <article class="image-quiz-card" id="img-q-${idx}">
+      <p class="image-quiz-title">${idx + 1}. ${item.question}</p>
+      <div class="image-quiz-options">
+        ${item.options.map((opt, optionIdx) => `
+          <button class="image-option" type="button" data-img-q="${idx}" data-img-o="${optionIdx}">
+            <img src="${opt.image}" alt="${opt.label}">
+            <span>${opt.label}</span>
+          </button>
+        `).join('')}
+      </div>
+      <div class="image-quiz-feedback" id="img-fb-${idx}"></div>
+    </article>
+  `).join('');
+
+  list.querySelectorAll('.image-option').forEach(button => {
+    button.addEventListener('click', () => {
+      const qIndex = Number(button.dataset.imgQ);
+      const selectedIndex = Number(button.dataset.imgO);
+      const q = imageQuizQuestions[qIndex];
+      const card = document.getElementById(`img-q-${qIndex}`);
+      const feedback = document.getElementById(`img-fb-${qIndex}`);
+
+      if (card.dataset.done === 'true') return;
+      card.dataset.done = 'true';
+
+      const options = card.querySelectorAll('.image-option');
+      options.forEach((optButton, optionIdx) => {
+        optButton.disabled = true;
+        if (optionIdx === q.answerIndex) optButton.classList.add('correct');
+      });
+
+      if (selectedIndex === q.answerIndex) {
+        button.classList.add('correct');
+        feedback.className = 'image-quiz-feedback fb-correct';
+        feedback.textContent = '✓ Richtig! ' + q.explain;
+        imageQuizScore += 1;
+      } else {
+        button.classList.add('wrong');
+        feedback.className = 'image-quiz-feedback fb-wrong';
+        feedback.innerHTML = `✗ Falsch. Richtig ist: <strong>${q.options[q.answerIndex].label}</strong><br>${q.explain}`;
+      }
+
+      imageQuizAnswered += 1;
+      updateImageQuizScore();
+    });
+  });
+}
+
 document.getElementById('reset-quiz').addEventListener('click', () => {
   renderQuiz();
+});
+
+document.getElementById('reset-image-quiz').addEventListener('click', () => {
+  renderImageQuiz();
 });
 
 setupBuilder('plant');
@@ -466,3 +591,4 @@ setupTopics();
 setupAnimalTypes();
 setupDivision();
 renderQuiz();
+renderImageQuiz();
