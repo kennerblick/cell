@@ -314,7 +314,7 @@ h2 { margin-top: 0; }
 
 .division-wrap {
   position: relative;
-  min-height: 260px;
+  min-height: 230px;
   margin: 14px 0;
   border: 1px solid #e3dca5;
   border-radius: 18px;
@@ -324,7 +324,7 @@ h2 { margin-top: 0; }
 
 .division-scene {
   display: none;
-  min-height: 260px;
+  min-height: 230px;
   align-items: center;
   justify-content: center;
   padding: 14px;
@@ -351,10 +351,10 @@ h2 { margin-top: 0; }
 
 .division-reference-image {
   display: block;
-  width: min(180px, 100%);
+  width: min(104px, 100%);
   height: auto;
   image-rendering: auto;
-  filter: drop-shadow(0 6px 10px rgba(98, 70, 13, 0.14));
+  filter: drop-shadow(0 4px 8px rgba(98, 70, 13, 0.14));
 }
 
 .scene-label {
