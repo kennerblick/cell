@@ -614,22 +614,125 @@ h2 { margin-top: 0; }
   background: #effcf5;
 }
 
+.quiz-score-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #f4f9ff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+}
+
+.quiz-score-bar[hidden] { display: none; }
+
+#quiz-score-text {
+  font-weight: 700;
+  white-space: nowrap;
+  min-width: 100px;
+}
+
+.quiz-score-track {
+  flex: 1;
+  height: 10px;
+  background: #dde8f4;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.quiz-score-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--green);
+  border-radius: 999px;
+  transition: width .4s ease;
+}
+
 .quiz {
   display: grid;
   gap: 12px;
   margin-bottom: 12px;
 }
+
+.quiz-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
 .quiz-question {
   border: 1px solid var(--line);
   border-radius: 14px;
-  padding: 12px;
+  padding: 14px;
   background: #fbfdff;
+  transition: border-color .2s;
 }
+
+.quiz-question.q-correct {
+  border-color: var(--green);
+  background: #f0fdf6;
+}
+
+.quiz-question.q-wrong {
+  border-color: #e05555;
+  background: #fff5f5;
+}
+
 .quiz-question p { margin-top: 0; font-weight: 700; }
-.quiz-question label { display: block; margin: 6px 0; }
-.result {
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background .15s, border-color .15s;
+}
+
+.quiz-option:hover {
+  background: var(--primary-soft);
+  border-color: var(--primary);
+}
+
+.quiz-option input[type="radio"] {
+  accent-color: var(--primary);
+}
+
+.quiz-option.opt-correct {
+  background: #e6f9ee;
+  border-color: var(--green);
   font-weight: 700;
-  color: var(--green);
+}
+
+.quiz-option.opt-wrong {
+  background: #fdeaea;
+  border-color: #e05555;
+  text-decoration: line-through;
+  opacity: .8;
+}
+
+.quiz-feedback {
+  margin-top: 10px;
+  font-size: .88rem;
+  border-radius: 10px;
+  padding: 8px 10px;
+  display: none;
+}
+
+.quiz-feedback.fb-correct {
+  display: block;
+  background: #e6f9ee;
+  color: #1a6e3c;
+  border: 1px solid #a8e6c4;
+}
+
+.quiz-feedback.fb-wrong {
+  display: block;
+  background: #fdeaea;
+  color: #952c2c;
+  border: 1px solid #f5a7a7;
 }
 .footer {
   text-align: center;

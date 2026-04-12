@@ -149,97 +149,128 @@ const quizQuestions = [
   {
     question: 'Welcher Teil macht die Fotosynthese?',
     options: ['Chloroplasten', 'Zellkern', 'Zellwand'],
-    answer: 'Chloroplasten'
+    answer: 'Chloroplasten',
+    explain: 'Chloroplasten enthalten den grünen Farbstoff Chlorophyll und sind der Ort der Fotosynthese. Der Zellkern steuert die Zelle, die Zellwand gibt ihr Festigkeit.'
   },
   {
     question: 'Was gibt einer Pflanzenzelle Schutz und Festigkeit?',
     options: ['Zellwand', 'Zellplasma', 'Zellkern'],
-    answer: 'Zellwand'
+    answer: 'Zellwand',
+    explain: 'Die Zellwand besteht aus Cellulose und umgibt die Pflanzenzelle von außen. Das Zellplasma ist flüssig, der Zellkern steuert die Zelle.'
   },
   {
     question: 'Warum ist Zellteilung wichtig?',
     options: ['Für Wachstum', 'Nur zum Sehen', 'Nur zum Schlafen'],
-    answer: 'Für Wachstum'
+    answer: 'Für Wachstum',
+    explain: 'Durch Zellteilung können Lebewesen wachsen, Zellen erneuern und sich ungeschlechtlich fortpflanzen. Sehen und Schlafen haben mit Zellteilung nichts zu tun.'
   },
   {
     question: 'Welcher Teil steuert viele Vorgänge in der Zelle?',
     options: ['Zellkern', 'Vakuole', 'Zellwand'],
-    answer: 'Zellkern'
+    answer: 'Zellkern',
+    explain: 'Im Zellkern liegt die Erbinformation (DNA). Er ist die Steuerzentrale der Zelle. Die Vakuole speichert Wasser, die Zellwand gibt Form und Festigkeit.'
   },
   {
     question: 'Was füllt die Zelle aus und ist zähflüssig?',
     options: ['Zellplasma', 'Zellwand', 'Chloroplast'],
-    answer: 'Zellplasma'
+    answer: 'Zellplasma',
+    explain: 'Das Zellplasma (Cytoplasma) ist eine zähflüssige Masse, in der alle Zellbestandteile eingebettet sind. Die Zellwand ist fest, Chloroplasten sind Organellen.'
   },
   {
     question: 'Welche Zellen besitzen Chloroplasten?',
     options: ['Pflanzenzellen', 'Tierzellen', 'Nur Muskelzellen'],
-    answer: 'Pflanzenzellen'
+    answer: 'Pflanzenzellen',
+    explain: 'Nur Pflanzenzellen (und einige Algen) enthalten Chloroplasten für die Fotosynthese. Tierzellen und Muskelzellen besitzen keine Chloroplasten.'
   },
   {
     question: 'Welche Struktur haben Tierzellen nicht?',
     options: ['Zellwand', 'Zellmembran', 'Zellkern'],
-    answer: 'Zellwand'
+    answer: 'Zellwand',
+    explain: 'Tierzellen besitzen keine starre Zellwand – das ist ein wichtiger Unterschied zu Pflanzenzellen. Zellmembran und Zellkern haben beide Zelltypen.'
   },
   {
     question: 'Was speichert die große Vakuole?',
     options: ['Wasser und Zellsaft', 'Sonnenlicht', 'Nur Luft'],
-    answer: 'Wasser und Zellsaft'
+    answer: 'Wasser und Zellsaft',
+    explain: 'Die zentrale Vakuole in Pflanzenzellen speichert Wasser, Nährstoffe und Zellsaft. Sonnenlicht wird in Chloroplasten genutzt, nicht gespeichert.'
   },
   {
     question: 'Womit stellt die Pflanze bei der Fotosynthese Zucker her?',
     options: ['Licht, Wasser und Kohlenstoffdioxid', 'Erde und Wind', 'Nur Wasser'],
-    answer: 'Licht, Wasser und Kohlenstoffdioxid'
+    answer: 'Licht, Wasser und Kohlenstoffdioxid',
+    explain: 'Die Fotosynthese braucht Lichtenergie, Wasser (aus dem Boden) und Kohlenstoffdioxid (aus der Luft). Erde und Wind sind keine Ausgangsstoffe der Fotosynthese.'
   },
   {
     question: 'Was entsteht bei der Fotosynthese zusätzlich zum Zucker?',
     options: ['Sauerstoff', 'Kalk', 'Metall'],
-    answer: 'Sauerstoff'
+    answer: 'Sauerstoff',
+    explain: 'Bei der Fotosynthese wird Wasser gespalten – dabei entsteht Sauerstoff, der an die Luft abgegeben wird. Kalk und Metall entstehen bei der Fotosynthese nicht.'
   },
   {
     question: 'Was passiert bei Schritt b der Zellteilung?',
     options: ['Die Einschnürung beginnt', 'Die Tochterzellen schlafen', 'Die Zellwand verschwindet sofort'],
-    answer: 'Die Einschnürung beginnt'
+    answer: 'Die Einschnürung beginnt',
+    explain: 'In Schritt b schnürt sich die Zelle in der Mitte ein. Der Zellkern streckt sich länglich aus. Tochterzellen „schlafen" nicht, und die Zellwand verschwindet nicht plötzlich.'
   },
   {
     question: 'Wie wächst die neue Membran bei der Teilung ein?',
     options: ['Von außen nach innen', 'Von innen nach außen', 'Gar nicht'],
-    answer: 'Von außen nach innen'
+    answer: 'Von außen nach innen',
+    explain: 'Die neue Trennmembran wächst von beiden Seiten (außen) nach innen und verbindet sich zuletzt in der Mitte. Sie entsteht also nicht von innen heraus.'
   },
   {
     question: 'Wozu können Pflanzen Zellteilung noch nutzen?',
     options: ['Zur ungeschlechtlichen Fortpflanzung', 'Nur zum Hören', 'Zum Farbenwechsel'],
-    answer: 'Zur ungeschlechtlichen Fortpflanzung'
+    answer: 'Zur ungeschlechtlichen Fortpflanzung',
+    explain: 'Pflanzen können sich durch Zellteilung ungeschlechtlich fortpflanzen, z. B. durch Stecklinge oder Senker. Hören und Farbenwechsel hängen nicht mit Zellteilung zusammen.'
   },
   {
     question: 'Was transportieren Zellen der Sprossachse?',
     options: ['Wasser und Nährstoffe', 'Nur Sauerstoff', 'Nur Sonnenlicht'],
-    answer: 'Wasser und Nährstoffe'
+    answer: 'Wasser und Nährstoffe',
+    explain: 'In der Sprossachse liegen Leitungsbahnen, die Wasser und Nährstoffe durch die ganze Pflanze transportieren. Sauerstoff und Sonnenlicht werden so nicht transportiert.'
   },
   {
     question: 'Welche tierischen Zellen leiten Signale weiter?',
     options: ['Nervenzellen', 'Hautzellen', 'Eizellen'],
-    answer: 'Nervenzellen'
+    answer: 'Nervenzellen',
+    explain: 'Nervenzellen haben lange Fortsätze und leiten elektrische Signale weiter – z. B. vom Gehirn zu den Muskeln. Haut- und Eizellen übernehmen andere Aufgaben.'
   },
   {
     question: 'Welche tierischen Zellen können sich zusammenziehen?',
     options: ['Muskelzellen', 'Blutzellen', 'Hautzellen'],
-    answer: 'Muskelzellen'
+    answer: 'Muskelzellen',
+    explain: 'Muskelzellen enthalten spezielle Proteinfasern (Aktin, Myosin), die sich verkürzen können. Dadurch entstehen Bewegungen. Blut- und Hautzellen können das nicht.'
   },
   {
     question: 'Welche Blutzellen transportieren Sauerstoff?',
     options: ['Rote Blutzellen', 'Nervenzellen', 'Hautzellen'],
-    answer: 'Rote Blutzellen'
+    answer: 'Rote Blutzellen',
+    explain: 'Rote Blutzellen (Erythrozyten) enthalten Hämoglobin und binden Sauerstoff. Nervenzellen leiten Signale, Hautzellen schützen die Körperoberfläche.'
   },
   {
     question: 'Wofür sind Hautzellen wichtig?',
     options: ['Für Schutz vor Keimen und Austrocknung', 'Für Fotosynthese', 'Für die Bildung von Chloroplasten'],
-    answer: 'Für Schutz vor Keimen und Austrocknung'
+    answer: 'Für Schutz vor Keimen und Austrocknung',
+    explain: 'Hautzellen bilden eine dichte Schutzschicht gegen Krankheitserreger, UV-Licht und Wasserverlust. Fotosynthese und Chloroplasten gibt es nur in Pflanzenzellen.'
   },
   {
     question: 'Welche tierische Zelle ist besonders groß und enthält viele Nährstoffe?',
     options: ['Eizelle', 'Muskelzelle', 'Weiße Blutzelle'],
-    answer: 'Eizelle'
+    answer: 'Eizelle',
+    explain: 'Die Eizelle ist mit bloßem Auge kaum sichtbar, aber sie ist die größte tierische Zelle und speichert Nährstoffe für den sich entwickelnden Embryo.'
+  },
+  {
+    question: 'Was ist der Unterschied zwischen geschlechtlicher und ungeschlechtlicher Fortpflanzung?',
+    options: ['Geschlechtlich braucht zwei Eltern, ungeschlechtlich nur einen', 'Beide brauchen immer zwei Eltern', 'Ungeschlechtlich ist nur bei Tieren möglich'],
+    answer: 'Geschlechtlich braucht zwei Eltern, ungeschlechtlich nur einen',
+    explain: 'Bei der geschlechtlichen Fortpflanzung werden Merkmale beider Eltern kombiniert. Ungeschlechtlich (z. B. Steckling) entsteht Nachwuchs von nur einem Elternteil.'
+  },
+  {
+    question: 'Welche Aussage über weiße Blutzellen ist richtig?',
+    options: ['Sie helfen bei der Abwehr von Krankheitserregern', 'Sie transportieren Sauerstoff', 'Sie machen Fotosynthese'],
+    answer: 'Sie helfen bei der Abwehr von Krankheitserregern',
+    explain: 'Weiße Blutzellen (Leukozyten) sind Teil des Immunsystems und bekämpfen Bakterien und Viren. Sauerstoff transportieren rote Blutzellen, Fotosynthese gibt es nur in Pflanzen.'
   }
 ];
 
@@ -357,34 +388,76 @@ function setupDivision() {
   });
 }
 
-function renderQuiz() {
-  const form = document.getElementById('quiz-form');
-  form.innerHTML = quizQuestions.map((q, idx) => `
-    <div class="quiz-question">
-      <p>${idx + 1}. ${q.question}</p>
-      ${q.options.map(option => `
-        <label><input type="radio" name="q${idx}" value="${option}"> ${option}</label>
-      `).join('')}
-    </div>
-  `).join('');
+let quizScore = 0;
+let quizAnswered = 0;
+
+function updateScoreBar() {
+  const bar = document.getElementById('quiz-score-bar');
+  const text = document.getElementById('quiz-score-text');
+  const fill = document.getElementById('quiz-score-fill');
+  bar.hidden = false;
+  text.textContent = `${quizScore} von ${quizAnswered} richtig`;
+  fill.style.width = `${quizAnswered > 0 ? Math.round(quizScore / quizAnswered * 100) : 0}%`;
 }
 
-document.getElementById('check-quiz').addEventListener('click', () => {
-  let score = 0;
-  quizQuestions.forEach((q, idx) => {
-    const selected = document.querySelector(`input[name="q${idx}"]:checked`);
-    if (selected && selected.value === q.answer) score += 1;
-  });
+function renderQuiz() {
+  quizScore = 0;
+  quizAnswered = 0;
+  const bar = document.getElementById('quiz-score-bar');
+  bar.hidden = true;
 
-  const result = document.getElementById('quiz-result');
-  result.textContent = score === quizQuestions.length
-    ? `Perfekt! Du hast alle ${quizQuestions.length} Fragen richtig.`
-    : `Super! Du hast ${score} von ${quizQuestions.length} richtig.`;
-});
+  const form = document.getElementById('quiz-form');
+  form.innerHTML = quizQuestions.map((q, idx) => `
+    <div class="quiz-question" id="qq-${idx}">
+      <p>${idx + 1}. ${q.question}</p>
+      ${q.options.map(option => `
+        <label class="quiz-option">
+          <input type="radio" name="q${idx}" value="${option}">
+          ${option}
+        </label>
+      `).join('')}
+      <div class="quiz-feedback" id="fb-${idx}"></div>
+    </div>
+  `).join('');
+
+  quizQuestions.forEach((q, idx) => {
+    form.querySelectorAll(`input[name="q${idx}"]`).forEach(radio => {
+      radio.addEventListener('change', () => {
+        const qBox = document.getElementById(`qq-${idx}`);
+        const fb = document.getElementById(`fb-${idx}`);
+
+        // Disable all options for this question
+        form.querySelectorAll(`input[name="q${idx}"]`).forEach(r => r.disabled = true);
+
+        const isCorrect = radio.value === q.answer;
+
+        // Style options
+        form.querySelectorAll(`input[name="q${idx}"]`).forEach(r => {
+          const label = r.closest('.quiz-option');
+          if (r.value === q.answer) label.classList.add('opt-correct');
+          else if (r === radio && !isCorrect) label.classList.add('opt-wrong');
+        });
+
+        if (isCorrect) {
+          qBox.classList.add('q-correct');
+          fb.className = 'quiz-feedback fb-correct';
+          fb.textContent = '✓ Richtig!';
+          quizScore += 1;
+        } else {
+          qBox.classList.add('q-wrong');
+          fb.className = 'quiz-feedback fb-wrong';
+          fb.innerHTML = `✗ Falsch. Richtig ist: <strong>${q.answer}</strong><br>${q.explain}`;
+        }
+
+        quizAnswered += 1;
+        updateScoreBar();
+      });
+    });
+  });
+}
 
 document.getElementById('reset-quiz').addEventListener('click', () => {
-  document.getElementById('quiz-form').reset();
-  document.getElementById('quiz-result').textContent = '';
+  renderQuiz();
 });
 
 setupBuilder('plant');

@@ -242,14 +242,16 @@
     <section class="panel" id="quiz">
       <div class="section-head">
         <h2>🎮 Mini-Quiz</h2>
-        <p>Jetzt mit 18 kurzen Fragen zum Wiederholen.</p>
+        <p>20 Fragen – Antwort wählen und sofort sehen, ob es stimmt.</p>
       </div>
-      <form id="quiz-form" class="quiz"></form>
+      <div id="quiz-score-bar" class="quiz-score-bar" hidden>
+        <span id="quiz-score-text"></span>
+        <div class="quiz-score-track"><div id="quiz-score-fill" class="quiz-score-fill"></div></div>
+      </div>
+      <form id="quiz-form" class="quiz quiz-grid"></form>
       <div class="quiz-actions">
-        <button class="btn btn--primary" id="check-quiz" type="button">Prüfen</button>
-        <button class="btn btn--secondary" id="reset-quiz" type="button">Neu</button>
+        <button class="btn btn--secondary" id="reset-quiz" type="button">Neu starten</button>
       </div>
-      <p id="quiz-result" class="result"></p>
     </section>
   </main>
 
