@@ -98,6 +98,34 @@ const topicInfo = {
   }
 };
 
+const animalTypeInfo = {
+  muskel: {
+    title: 'Muskelzellen',
+    text: 'Muskelzellen sind lang gestreckt und können sich zusammenziehen.',
+    extra: 'So helfen sie beim Laufen, Greifen und sogar beim Schlagen des Herzens.'
+  },
+  nerven: {
+    title: 'Nervenzellen',
+    text: 'Nervenzellen besitzen lange Fortsätze und leiten Signale weiter.',
+    extra: 'Damit übermitteln sie Informationen zwischen Gehirn, Rückenmark und Körper.'
+  },
+  blut: {
+    title: 'Blutzellen',
+    text: 'Blutzellen schwimmen im Blut und übernehmen verschiedene Aufgaben.',
+    extra: 'Rote Blutzellen transportieren Sauerstoff, weiße Blutzellen helfen bei der Abwehr von Krankheitserregern.'
+  },
+  haut: {
+    title: 'Hautzellen',
+    text: 'Hautzellen liegen dicht an dicht und bilden eine schützende Oberfläche.',
+    extra: 'Sie schützen den Körper vor Verletzungen, Austrocknung und Keimen.'
+  },
+  eizelle: {
+    title: 'Eizelle',
+    text: 'Die Eizelle ist besonders groß und enthält viele Nährstoffe.',
+    extra: 'Sie ist eine Geschlechtszelle und wichtig für die Fortpflanzung.'
+  }
+};
+
 const divisionSteps = {
   a: {
     title: 'a) Mutterzelle',
@@ -132,61 +160,86 @@ const quizQuestions = [
     question: 'Warum ist Zellteilung wichtig?',
     options: ['Für Wachstum', 'Nur zum Sehen', 'Nur zum Schlafen'],
     answer: 'Für Wachstum'
-    },
-    {
-      question: 'Welcher Teil steuert viele Vorgänge in der Zelle?',
-      options: ['Zellkern', 'Vakuole', 'Zellwand'],
-      answer: 'Zellkern'
-    },
-    {
-      question: 'Was füllt die Zelle aus und ist zähflüssig?',
-      options: ['Zellplasma', 'Zellwand', 'Chloroplast'],
-      answer: 'Zellplasma'
-    },
-    {
-      question: 'Welche Zellen besitzen Chloroplasten?',
-      options: ['Pflanzenzellen', 'Tierzellen', 'Nur Muskelzellen'],
-      answer: 'Pflanzenzellen'
-    },
-    {
-      question: 'Welche Struktur haben Tierzellen nicht?',
-      options: ['Zellwand', 'Zellmembran', 'Zellkern'],
-      answer: 'Zellwand'
-    },
-    {
-      question: 'Was speichert die große Vakuole?',
-      options: ['Wasser und Zellsaft', 'Sonnenlicht', 'Nur Luft'],
-      answer: 'Wasser und Zellsaft'
-    },
-    {
-      question: 'Womit stellt die Pflanze bei der Fotosynthese Zucker her?',
-      options: ['Licht, Wasser und Kohlenstoffdioxid', 'Erde und Wind', 'Nur Wasser'],
-      answer: 'Licht, Wasser und Kohlenstoffdioxid'
-    },
-    {
-      question: 'Was entsteht bei der Fotosynthese zusätzlich zum Zucker?',
-      options: ['Sauerstoff', 'Kalk', 'Metall'],
-      answer: 'Sauerstoff'
-    },
-    {
-      question: 'Was passiert bei Schritt b der Zellteilung?',
-      options: ['Die Einschnürung beginnt', 'Die Tochterzellen schlafen', 'Die Zellwand verschwindet sofort'],
-      answer: 'Die Einschnürung beginnt'
-    },
-    {
-      question: 'Wie wächst die neue Membran bei der Teilung ein?',
-      options: ['Von außen nach innen', 'Von innen nach außen', 'Gar nicht'],
-      answer: 'Von außen nach innen'
-    },
-    {
-      question: 'Wozu können Pflanzen Zellteilung noch nutzen?',
-      options: ['Zur ungeschlechtlichen Fortpflanzung', 'Nur zum Hören', 'Zum Farbenwechsel'],
-      answer: 'Zur ungeschlechtlichen Fortpflanzung'
-    },
-    {
-      question: 'Was transportieren Zellen der Sprossachse?',
-      options: ['Wasser und Nährstoffe', 'Nur Sauerstoff', 'Nur Sonnenlicht'],
-      answer: 'Wasser und Nährstoffe'
+  },
+  {
+    question: 'Welcher Teil steuert viele Vorgänge in der Zelle?',
+    options: ['Zellkern', 'Vakuole', 'Zellwand'],
+    answer: 'Zellkern'
+  },
+  {
+    question: 'Was füllt die Zelle aus und ist zähflüssig?',
+    options: ['Zellplasma', 'Zellwand', 'Chloroplast'],
+    answer: 'Zellplasma'
+  },
+  {
+    question: 'Welche Zellen besitzen Chloroplasten?',
+    options: ['Pflanzenzellen', 'Tierzellen', 'Nur Muskelzellen'],
+    answer: 'Pflanzenzellen'
+  },
+  {
+    question: 'Welche Struktur haben Tierzellen nicht?',
+    options: ['Zellwand', 'Zellmembran', 'Zellkern'],
+    answer: 'Zellwand'
+  },
+  {
+    question: 'Was speichert die große Vakuole?',
+    options: ['Wasser und Zellsaft', 'Sonnenlicht', 'Nur Luft'],
+    answer: 'Wasser und Zellsaft'
+  },
+  {
+    question: 'Womit stellt die Pflanze bei der Fotosynthese Zucker her?',
+    options: ['Licht, Wasser und Kohlenstoffdioxid', 'Erde und Wind', 'Nur Wasser'],
+    answer: 'Licht, Wasser und Kohlenstoffdioxid'
+  },
+  {
+    question: 'Was entsteht bei der Fotosynthese zusätzlich zum Zucker?',
+    options: ['Sauerstoff', 'Kalk', 'Metall'],
+    answer: 'Sauerstoff'
+  },
+  {
+    question: 'Was passiert bei Schritt b der Zellteilung?',
+    options: ['Die Einschnürung beginnt', 'Die Tochterzellen schlafen', 'Die Zellwand verschwindet sofort'],
+    answer: 'Die Einschnürung beginnt'
+  },
+  {
+    question: 'Wie wächst die neue Membran bei der Teilung ein?',
+    options: ['Von außen nach innen', 'Von innen nach außen', 'Gar nicht'],
+    answer: 'Von außen nach innen'
+  },
+  {
+    question: 'Wozu können Pflanzen Zellteilung noch nutzen?',
+    options: ['Zur ungeschlechtlichen Fortpflanzung', 'Nur zum Hören', 'Zum Farbenwechsel'],
+    answer: 'Zur ungeschlechtlichen Fortpflanzung'
+  },
+  {
+    question: 'Was transportieren Zellen der Sprossachse?',
+    options: ['Wasser und Nährstoffe', 'Nur Sauerstoff', 'Nur Sonnenlicht'],
+    answer: 'Wasser und Nährstoffe'
+  },
+  {
+    question: 'Welche tierischen Zellen leiten Signale weiter?',
+    options: ['Nervenzellen', 'Hautzellen', 'Eizellen'],
+    answer: 'Nervenzellen'
+  },
+  {
+    question: 'Welche tierischen Zellen können sich zusammenziehen?',
+    options: ['Muskelzellen', 'Blutzellen', 'Hautzellen'],
+    answer: 'Muskelzellen'
+  },
+  {
+    question: 'Welche Blutzellen transportieren Sauerstoff?',
+    options: ['Rote Blutzellen', 'Nervenzellen', 'Hautzellen'],
+    answer: 'Rote Blutzellen'
+  },
+  {
+    question: 'Wofür sind Hautzellen wichtig?',
+    options: ['Für Schutz vor Keimen und Austrocknung', 'Für Fotosynthese', 'Für die Bildung von Chloroplasten'],
+    answer: 'Für Schutz vor Keimen und Austrocknung'
+  },
+  {
+    question: 'Welche tierische Zelle ist besonders groß und enthält viele Nährstoffe?',
+    options: ['Eizelle', 'Muskelzelle', 'Weiße Blutzelle'],
+    answer: 'Eizelle'
   }
 ];
 
@@ -259,6 +312,27 @@ function setupTopics() {
   });
 }
 
+function setupAnimalTypes() {
+  const info = document.getElementById('animal-type-info');
+
+  document.querySelectorAll('[data-animal-type]').forEach(button => {
+    button.addEventListener('click', () => {
+      const type = animalTypeInfo[button.dataset.animalType];
+      if (!type) return;
+
+      document.querySelectorAll('[data-animal-type]').forEach(card => card.classList.remove('active'));
+      button.classList.add('active');
+
+      info.innerHTML = `
+        <h3>${type.title}</h3>
+        <p>${type.text}</p>
+        <p><strong>Merke:</strong> ${type.extra}</p>
+      `;
+      popCard(info);
+    });
+  });
+}
+
 function setupDivision() {
   const info = document.getElementById('division-info');
 
@@ -316,5 +390,6 @@ document.getElementById('reset-quiz').addEventListener('click', () => {
 setupBuilder('plant');
 setupBuilder('animal');
 setupTopics();
+setupAnimalTypes();
 setupDivision();
 renderQuiz();
