@@ -132,6 +132,61 @@ const quizQuestions = [
     question: 'Warum ist Zellteilung wichtig?',
     options: ['Für Wachstum', 'Nur zum Sehen', 'Nur zum Schlafen'],
     answer: 'Für Wachstum'
+    },
+    {
+      question: 'Welcher Teil steuert viele Vorgänge in der Zelle?',
+      options: ['Zellkern', 'Vakuole', 'Zellwand'],
+      answer: 'Zellkern'
+    },
+    {
+      question: 'Was füllt die Zelle aus und ist zähflüssig?',
+      options: ['Zellplasma', 'Zellwand', 'Chloroplast'],
+      answer: 'Zellplasma'
+    },
+    {
+      question: 'Welche Zellen besitzen Chloroplasten?',
+      options: ['Pflanzenzellen', 'Tierzellen', 'Nur Muskelzellen'],
+      answer: 'Pflanzenzellen'
+    },
+    {
+      question: 'Welche Struktur haben Tierzellen nicht?',
+      options: ['Zellwand', 'Zellmembran', 'Zellkern'],
+      answer: 'Zellwand'
+    },
+    {
+      question: 'Was speichert die große Vakuole?',
+      options: ['Wasser und Zellsaft', 'Sonnenlicht', 'Nur Luft'],
+      answer: 'Wasser und Zellsaft'
+    },
+    {
+      question: 'Womit stellt die Pflanze bei der Fotosynthese Zucker her?',
+      options: ['Licht, Wasser und Kohlenstoffdioxid', 'Erde und Wind', 'Nur Wasser'],
+      answer: 'Licht, Wasser und Kohlenstoffdioxid'
+    },
+    {
+      question: 'Was entsteht bei der Fotosynthese zusätzlich zum Zucker?',
+      options: ['Sauerstoff', 'Kalk', 'Metall'],
+      answer: 'Sauerstoff'
+    },
+    {
+      question: 'Was passiert bei Schritt b der Zellteilung?',
+      options: ['Die Einschnürung beginnt', 'Die Tochterzellen schlafen', 'Die Zellwand verschwindet sofort'],
+      answer: 'Die Einschnürung beginnt'
+    },
+    {
+      question: 'Wie wächst die neue Membran bei der Teilung ein?',
+      options: ['Von außen nach innen', 'Von innen nach außen', 'Gar nicht'],
+      answer: 'Von außen nach innen'
+    },
+    {
+      question: 'Wozu können Pflanzen Zellteilung noch nutzen?',
+      options: ['Zur ungeschlechtlichen Fortpflanzung', 'Nur zum Hören', 'Zum Farbenwechsel'],
+      answer: 'Zur ungeschlechtlichen Fortpflanzung'
+    },
+    {
+      question: 'Was transportieren Zellen der Sprossachse?',
+      options: ['Wasser und Nährstoffe', 'Nur Sauerstoff', 'Nur Sonnenlicht'],
+      answer: 'Wasser und Nährstoffe'
   }
 ];
 
