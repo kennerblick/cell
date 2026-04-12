@@ -280,9 +280,10 @@ const imageQuizQuestions = [
     options: [
       { label: 'Nervenzelle', image: 'assets/image-quiz/neuron.svg' },
       { label: 'Muskelzelle', image: 'assets/image-quiz/muscle.svg' },
-      { label: 'Hautzellen', image: 'assets/image-quiz/skin.svg' }
+      { label: 'Rote Blutzelle', image: 'assets/image-quiz/red-blood.svg' }
     ],
-    answerIndex: 0,
+    answer: 'Nervenzelle',
+    tip: 'Achte auf lange Fortsätze.',
     explain: 'Nervenzellen haben einen Zellkörper und lange Fortsätze, um Signale weiterzuleiten.'
   },
   {
@@ -290,42 +291,110 @@ const imageQuizQuestions = [
     options: [
       { label: 'Eizelle', image: 'assets/image-quiz/egg.svg' },
       { label: 'Rote Blutzelle', image: 'assets/image-quiz/red-blood.svg' },
-      { label: 'Nervenzelle', image: 'assets/image-quiz/neuron.svg' }
+      { label: 'Weiße Blutzelle', image: 'assets/image-quiz/white-blood.svg' }
     ],
-    answerIndex: 1,
+    answer: 'Rote Blutzelle',
+    tip: 'Suche die eingedellte Scheibenform.',
     explain: 'Rote Blutzellen sind scheibenfoermig und transportieren Sauerstoff mit Hämoglobin.'
+  },
+  {
+    question: 'Welche Abbildung zeigt eine weiße Blutzelle?',
+    options: [
+      { label: 'Weiße Blutzelle', image: 'assets/image-quiz/white-blood.svg' },
+      { label: 'Rote Blutzelle', image: 'assets/image-quiz/red-blood.svg' },
+      { label: 'Hautzellen', image: 'assets/image-quiz/skin.svg' }
+    ],
+    answer: 'Weiße Blutzelle',
+    tip: 'Achte auf die unregelmäßige Kernstruktur im Inneren.',
+    explain: 'Weiße Blutzellen besitzen oft einen deutlich geformten Zellkern und sind Teil der Immunabwehr.'
   },
   {
     question: 'Welche Abbildung zeigt eine Eizelle?',
     options: [
+      { label: 'Muskelzelle', image: 'assets/image-quiz/muscle.svg' },
       { label: 'Eizelle', image: 'assets/image-quiz/egg.svg' },
-      { label: 'Rote Blutzelle', image: 'assets/image-quiz/red-blood.svg' },
-      { label: 'Muskelzelle', image: 'assets/image-quiz/muscle.svg' }
+      { label: 'Nervenzelle', image: 'assets/image-quiz/neuron.svg' }
     ],
-    answerIndex: 0,
+    answer: 'Eizelle',
+    tip: 'Suche die besonders große runde Zelle.',
     explain: 'Die Eizelle ist besonders groß und enthält viele Nährstoffe für den Entwicklungsbeginn.'
   },
   {
-    question: 'In welcher Abbildung sieht man Chloroplasten?',
+    question: 'Welche Abbildung zeigt eine Muskelzelle?',
     options: [
       { label: 'Hautzellen', image: 'assets/image-quiz/skin.svg' },
-      { label: 'Chloroplast', image: 'assets/image-quiz/chloroplast.svg' },
-      { label: 'Nervenzelle', image: 'assets/image-quiz/neuron.svg' }
+      { label: 'Muskelzelle', image: 'assets/image-quiz/muscle.svg' },
+      { label: 'Pflanzenzelle', image: 'assets/image-quiz/plant-cell.svg' }
     ],
-    answerIndex: 1,
-    explain: 'Chloroplasten sind grüne Organellen der Pflanzenzelle und Ort der Fotosynthese.'
+    answer: 'Muskelzelle',
+    tip: 'Achte auf die längliche Form mit Streifen.',
+    explain: 'Muskelzellen sind langgezogen und besitzen kontraktile Strukturen für Bewegung.'
   },
   {
     question: 'Welche Abbildung passt zu dicht angeordneten Hautzellen?',
     options: [
-      { label: 'Rote Blutzelle', image: 'assets/image-quiz/red-blood.svg' },
       { label: 'Hautzellen', image: 'assets/image-quiz/skin.svg' },
-      { label: 'Muskelzelle', image: 'assets/image-quiz/muscle.svg' }
+      { label: 'Nervenzelle', image: 'assets/image-quiz/neuron.svg' },
+      { label: 'Rote Blutzelle', image: 'assets/image-quiz/red-blood.svg' }
     ],
-    answerIndex: 1,
+    answer: 'Hautzellen',
+    tip: 'Suche ein Mosaik aus vielen ähnlichen Zellen.',
     explain: 'Hautzellen liegen eng nebeneinander und bilden eine schützende Oberfläche.'
+  },
+  {
+    question: 'In welcher Abbildung sieht man Chloroplasten?',
+    options: [
+      { label: 'Chloroplast', image: 'assets/image-quiz/chloroplast.svg' },
+      { label: 'Rote Blutzelle', image: 'assets/image-quiz/red-blood.svg' },
+      { label: 'Tierzelle', image: 'assets/image-quiz/animal-cell.svg' }
+    ],
+    answer: 'Chloroplast',
+    tip: 'Suche die grüne, ovale Struktur.',
+    explain: 'Chloroplasten sind grüne Organellen der Pflanzenzelle und Ort der Fotosynthese.'
+  },
+  {
+    question: 'Welche Abbildung zeigt eine Pflanzenzelle?',
+    options: [
+      { label: 'Tierzelle', image: 'assets/image-quiz/animal-cell.svg' },
+      { label: 'Pflanzenzelle', image: 'assets/image-quiz/plant-cell.svg' },
+      { label: 'Eizelle', image: 'assets/image-quiz/egg.svg' }
+    ],
+    answer: 'Pflanzenzelle',
+    tip: 'Achte auf die eher eckige Form mit Zellwand.',
+    explain: 'Pflanzenzellen haben eine feste Zellwand, häufig Chloroplasten und oft eine große Vakuole.'
+  },
+  {
+    question: 'Welche Abbildung zeigt eine Tierzelle?',
+    options: [
+      { label: 'Pflanzenzelle', image: 'assets/image-quiz/plant-cell.svg' },
+      { label: 'Tierzelle', image: 'assets/image-quiz/animal-cell.svg' },
+      { label: 'Chloroplast', image: 'assets/image-quiz/chloroplast.svg' }
+    ],
+    answer: 'Tierzelle',
+    tip: 'Suche die eher runde/ovale Zelle ohne Zellwand.',
+    explain: 'Tierzellen besitzen Zellmembran, Zellplasma und Zellkern, aber keine starre Zellwand.'
+  },
+  {
+    question: 'Welche Abbildung gehört NICHT zu einer ganzen Zelle, sondern zu einer Zellorganelle?',
+    options: [
+      { label: 'Nervenzelle', image: 'assets/image-quiz/neuron.svg' },
+      { label: 'Chloroplast', image: 'assets/image-quiz/chloroplast.svg' },
+      { label: 'Eizelle', image: 'assets/image-quiz/egg.svg' }
+    ],
+    answer: 'Chloroplast',
+    tip: 'Eine Option ist nur ein Teil einer Pflanzenzelle.',
+    explain: 'Der Chloroplast ist keine eigenständige Zelle, sondern eine Organell innerhalb der Pflanzenzelle.'
   }
 ];
+
+function shuffledOptions(options) {
+  const copy = options.map(option => ({ ...option }));
+  for (let i = copy.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
 
 function popCard(element) {
   if (!element) return;
@@ -532,21 +601,34 @@ function renderImageQuiz() {
     <article class="image-quiz-card" id="img-q-${idx}">
       <p class="image-quiz-title">${idx + 1}. ${item.question}</p>
       <div class="image-quiz-options">
-        ${item.options.map((opt, optionIdx) => `
-          <button class="image-option" type="button" data-img-q="${idx}" data-img-o="${optionIdx}">
-            <img src="${opt.image}" alt="${opt.label}">
-            <span>${opt.label}</span>
+        ${shuffledOptions(item.options).map((opt, optionIdx) => `
+          <button class="image-option" type="button" data-img-q="${idx}" data-img-o="${optionIdx}" data-img-label="${opt.label}">
+            <img src="${opt.image}" alt="Bildoption ${optionIdx + 1}">
           </button>
         `).join('')}
+      </div>
+      <div class="image-quiz-controls">
+        <button class="image-tip-btn" type="button" data-img-tip="${idx}">Tipp anzeigen</button>
       </div>
       <div class="image-quiz-feedback" id="img-fb-${idx}"></div>
     </article>
   `).join('');
 
+  list.querySelectorAll('.image-tip-btn').forEach(tipButton => {
+    tipButton.addEventListener('click', () => {
+      const qIndex = Number(tipButton.dataset.imgTip);
+      const q = imageQuizQuestions[qIndex];
+      const feedback = document.getElementById(`img-fb-${qIndex}`);
+      if (feedback.classList.contains('fb-correct') || feedback.classList.contains('fb-wrong')) return;
+      feedback.className = 'image-quiz-feedback fb-correct';
+      feedback.textContent = `Hinweis: ${q.tip}`;
+    });
+  });
+
   list.querySelectorAll('.image-option').forEach(button => {
     button.addEventListener('click', () => {
       const qIndex = Number(button.dataset.imgQ);
-      const selectedIndex = Number(button.dataset.imgO);
+      const selectedLabel = button.dataset.imgLabel;
       const q = imageQuizQuestions[qIndex];
       const card = document.getElementById(`img-q-${qIndex}`);
       const feedback = document.getElementById(`img-fb-${qIndex}`);
@@ -555,12 +637,12 @@ function renderImageQuiz() {
       card.dataset.done = 'true';
 
       const options = card.querySelectorAll('.image-option');
-      options.forEach((optButton, optionIdx) => {
+      options.forEach(optButton => {
         optButton.disabled = true;
-        if (optionIdx === q.answerIndex) optButton.classList.add('correct');
+        if (optButton.dataset.imgLabel === q.answer) optButton.classList.add('correct');
       });
 
-      if (selectedIndex === q.answerIndex) {
+      if (selectedLabel === q.answer) {
         button.classList.add('correct');
         feedback.className = 'image-quiz-feedback fb-correct';
         feedback.textContent = '✓ Richtig! ' + q.explain;
@@ -568,7 +650,7 @@ function renderImageQuiz() {
       } else {
         button.classList.add('wrong');
         feedback.className = 'image-quiz-feedback fb-wrong';
-        feedback.innerHTML = `✗ Falsch. Richtig ist: <strong>${q.options[q.answerIndex].label}</strong><br>${q.explain}`;
+        feedback.innerHTML = `✗ Falsch. Richtig ist: <strong>${q.answer}</strong><br>${q.explain}`;
       }
 
       imageQuizAnswered += 1;
